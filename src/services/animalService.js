@@ -11,3 +11,5 @@ exports.getMyAnimals = (ownerId) => Animal.find({ owner: ownerId }).populate("ow
 exports.update = (animalId, animalData) => Animal.findByIdAndUpdate(animalId, animalData);
 
 exports.delete = (animalId) => Animal.findByIdAndDelete(animalId);
+
+exports.getLastThreeAdded = () => Animal.find().sort({ createdAt: -1 }).limit(3).lean();

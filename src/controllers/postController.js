@@ -5,7 +5,7 @@ const { extractErrorMsgs } = require("./../utils/errorHandler");
 
 router.get("/all", async (req, res) => {
   const animals = await animalService.getAll().lean();
-  console.log({ animals });
+
   res.render("posts/dashboard", { animals });
 });
 
@@ -77,6 +77,17 @@ router.get("/:animalId/delete", async (req, res) => {
 
   await animalService.delete(animalId);
   res.redirect("/posts/all");
+});
+
+router.get("/", async (req, res) => {
+  try {
+    const lastThreeAnimals = await animalService.getLastThreeAdded();
+    res.render("home", { lastThreeAnimals });
+  } catch (error) {
+    console.error(error);
+    // Handle the error accordingly
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 // router.get("/:creatureId/vote", async (req, res) => {
