@@ -77,11 +77,13 @@
 16. Map pages to navigation in both LoggedIn and LoggedOut state
 - created all-posts page and its routes, create page and profile page.
 
+
 17. Implements dashboard page
-- show each creature with image, name, species, description
-- add details button to every creature
+- show each animal with image, name and description
+- add details button to every animal
 - If no creatures "There are no posts yet..."
 
+18. Add creature model to Mongoose
 
 
 
