@@ -32,18 +32,17 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  owner: {
+    type: mongoose.Types.ObjectId,
+    ref: "User",
+    required: true,
+  },
   //   votes: [
   //     {
   //       type: mongoose.Types.ObjectId,
   //       ref: "User",
   //     },
   //   ],
-  //   owner: {
-  //     type: mongoose.Types.ObjectId,
-  //     ref: "User",
-  //     required: true,
-  //   },
 });
-
 const Animal = mongoose.model("Animal", animalSchema);
 module.exports = Animal;
