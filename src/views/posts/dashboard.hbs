@@ -7,8 +7,9 @@
                 <h2>Animals in Need</h2>
                 <ul class="card-wrapper">
                     <!-- Display a li with information about every post (if any)-->
+                    {{#each animals}}
                     <li class="card">
-                        <img src="{{imageUrl}}" />
+                        <img src="{{imageUrl}}" alt="{{name}}" />
                         <p>
                             <strong>Name: </strong><span class="name">{{name}}</span>
                         </p>
@@ -18,7 +19,7 @@
                         <p><strong>Need of:</strong><span class="need-of">{{needs}}</span></p>
                         <a class="details-btn" href="#">Details</a>
                     </li>
-
+                    {{/each}}
                 </ul>
 
                 <!-- Display an h2 if there are no posts -->

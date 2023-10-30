@@ -4,8 +4,9 @@ const { isAuth } = require("./../middlewares/authMiddleware");
 const { extractErrorMsgs } = require("./../utils/errorHandler");
 
 router.get("/all", async (req, res) => {
-  //   const animals = await animalService.getAll().lean();
-  res.render("posts/dashboard");
+  const animals = await animalService.getAll().lean();
+  console.log({ animals });
+  res.render("posts/dashboard", { animals });
 });
 
 router.get("/create", isAuth, (req, res) => {

@@ -81,9 +81,9 @@
 17. Implements dashboard page
 - show each animal with image, name and description
 - add details button to every animal
-- If no creatures "There are no posts yet..."
+- If no animals "There are no posts yet..."
 
-18. Add creature model to Mongoose
+18. Add animal model to Mongoose
 
 
 
