@@ -74,5 +74,16 @@
 - show in the main layout
 - pass error to render in login and register pages
 
+16. Map pages to navigation in both LoggedIn and LoggedOut state
+- created all-posts page and its routes, create page and profile page.
+
+17. Implements dashboard page
+- show each creature with image, name, species, description
+- add details button to every creature
+- If no creatures "There are no posts yet..."
+
+
+
+
 
 
