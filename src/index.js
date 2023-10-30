@@ -2,7 +2,7 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const mongoose = require("mongoose");
 const path = require("path");
-// const cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 // const { auth } = require("./middlewares/authMiddleware");
 
 const { PORT, DB_URL } = require("./constants");
@@ -14,7 +14,7 @@ const app = express();
 //Express Configurations
 app.use(express.static(path.resolve(__dirname, "./public")));
 app.use(express.urlencoded({ extended: false }));
-// app.use(cookieParser());
+app.use(cookieParser());
 // app.use(auth);
 
 //Handlebars COnfiguration

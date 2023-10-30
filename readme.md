@@ -49,3 +49,7 @@
 - install cookie-parser
 - config cookie-parser
 - set cookie with the token
+
+11. Implement Logout
+
+
