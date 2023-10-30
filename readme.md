@@ -52,4 +52,15 @@
 
 11. Implement Logout
 
+12. Authentication middleware
+
+- create middleware directory
+- add auth middleware and import it in express config below cookieParser
+- decode the token
+- handle invalid token
+- provide authorization
+
+13. Dynamic navigation
+- conditional options in navigation
+- add data to res.locals for hbs template
 
