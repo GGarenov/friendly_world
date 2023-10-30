@@ -17,3 +17,10 @@
     - fix hyperlinks
     - render hme page in hbs
 
+5. Authentication
+- user controller
+- add controller to routes
+- fix navigations in the nav bar (login, register, logout)
+- render login page
+- render register page
+
