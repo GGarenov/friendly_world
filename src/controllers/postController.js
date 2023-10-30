@@ -47,29 +47,30 @@ router.get("/:animalId/details", async (req, res) => {
   res.render("posts/details", { animal, isOwner });
 });
 
-// router.get("/:creatureId/edit", async (req, res) => {
-//   const { creatureId } = req.params;
+router.get("/:animalId/edit", async (req, res) => {
+  const { animalId } = req.params;
 
-//   const creature = await creatureService.singleCreature(creatureId).lean();
-//   res.render("post/edit", { creature });
-// });
+  const animal = await animalService.singleAnimal(animalId).lean();
+  res.render("posts/edit", { animal });
+});
 
-// router.post("/:creatureId/edit", async (req, res) => {
-//   const { creatureId } = req.params;
-//   const { name, specie, skinColor, eyeColor, imageUrl, description } = req.body;
-//   const payload = {
-//     name,
-//     specie,
-//     skinColor,
-//     eyeColor,
-//     imageUrl,
-//     description,
-//     owner: req.user,
-//   };
+router.post("/:animalId/edit", async (req, res) => {
+  const { animalId } = req.params;
+  const { name, years, kind, imageUrl, needs, location, description } = req.body;
+  const payload = {
+    name,
+    years,
+    kind,
+    imageUrl,
+    needs,
+    location,
+    description,
+    owner: req.user,
+  };
 
-//   await creatureService.update(creatureId, payload);
-//   res.redirect(`/posts/${creatureId}/details`);
-// });
+  await animalService.update(animalId, payload);
+  res.redirect(`/posts/${animalId}/details`);
+});
 
 router.get("/:animalId/delete", async (req, res) => {
   const { animalId } = req.params;
