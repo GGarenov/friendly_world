@@ -24,3 +24,28 @@
 - render login page
 - render register page
 
+6. Add User model
+- simple validation in Schema
+- add method for register
+- create first User record in the db
+- validate password
+- validate email
+
+7. Hash password
+- install bcrypt
+- hash password
+
+8. Login
+    - find user by email
+    - validate password with hash
+
+9. Generate jsonwebtoken
+- install jsonwebtoken
+- promisify jsonwebtoken
+- generate secret
+- generate token in service login
+
+10. Return token in cookie
+- install cookie-parser
+- config cookie-parser
+- set cookie with the token
