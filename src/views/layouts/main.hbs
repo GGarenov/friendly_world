@@ -27,7 +27,9 @@
                 <div>
                     <a href="/">Home</a>
                     <a href="/posts/all">Dashboard</a>
-                    <a href="#">Search</a>
+                    {{#if isAuthenticated}}
+                    <a href="/posts/search">Search</a>
+                    {{/if}}
                 </div>
 
                 <!-- Logged-in users -->

@@ -90,6 +90,22 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/search", async (req, res) => {
+  const { search, name, location, needs } = req.query;
+
+  let animals = await animalService.getAll().lean();
+  let filteredAnimals = [];
+
+  if (search || name || location || needs) {
+    filteredAnimals = animalService.searchAnimal(animals, search, name, location, needs);
+  } else {
+    // If no search parameters are provided, display all electronics
+    filteredAnimals = animals;
+  }
+
+  res.render("posts/search", { animals: filteredAnimals, search, name, location, needs });
+});
+
 // router.get("/:creatureId/vote", async (req, res) => {
 //   const { creatureId } = req.params;
 //   const { _id } = req.user;

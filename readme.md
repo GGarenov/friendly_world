@@ -85,6 +85,9 @@
 
 18. Add animal model to Mongoose
 
+19. Search functionality
+
+
 
 
 
