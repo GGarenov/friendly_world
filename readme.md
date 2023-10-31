@@ -86,7 +86,9 @@
 18. Add animal model to Mongoose
 
 19. Search functionality
-
+    - search page was rendered
+    - search page route was created 
+    - search page was converted from html to hbs
 
 
 
