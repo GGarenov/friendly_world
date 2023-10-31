@@ -99,7 +99,7 @@ router.get("/search", async (req, res) => {
   if (search || name || location || needs) {
     filteredAnimals = animalService.searchAnimal(animals, search, name, location, needs);
   } else {
-    // If no search parameters are provided, display all electronics
+    // If no search parameters are provided, display all animals
     filteredAnimals = animals;
   }
 
