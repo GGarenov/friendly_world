@@ -90,6 +90,8 @@
     - search page route was created 
     - search page was converted from html to hbs
 
+20. Donation funcionality was partialy done.
+
 
 
 
