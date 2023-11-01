@@ -104,6 +104,7 @@ router.get("/search", async (req, res) => {
   }
 
   res.render("posts/search", { animals: filteredAnimals, search, name, location, needs });
+  console.log(filteredAnimals);
 });
 
 // router.get("/:creatureId/vote", async (req, res) => {
