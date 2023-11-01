@@ -24,7 +24,7 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  location: {
+  needs: {
     type: String,
     required: true,
   },
@@ -32,17 +32,17 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  donations: [
+    {
+      type: mongoose.Types.ObjectId,
+      ref: "User",
+    },
+  ],
   owner: {
     type: mongoose.Types.ObjectId,
     ref: "User",
     required: true,
   },
-  //   votes: [
-  //     {
-  //       type: mongoose.Types.ObjectId,
-  //       ref: "User",
-  //     },
-  //   ],
 });
 const Animal = mongoose.model("Animal", animalSchema);
 module.exports = Animal;

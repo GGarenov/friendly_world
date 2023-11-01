@@ -51,3 +51,15 @@ exports.searchAnimal = (animals, search, name, location, needs) => {
 
   return filteredAnimals;
 };
+
+exports.addDontationToAnimal = async (animalId, userId) => {
+  const animal = await this.singleAnimal(animalId);
+  const isExistingInDonations = animal.donations.some((d) => d?.toString() === userId);
+
+  if (isExistingInDonations) {
+    return;
+  }
+
+  animal.donations.push(userId);
+  return animal.save();
+};

@@ -107,14 +107,14 @@ router.get("/search", async (req, res) => {
   console.log(filteredAnimals);
 });
 
-// router.get("/:creatureId/vote", async (req, res) => {
-//   const { creatureId } = req.params;
-//   const { _id } = req.user;
-//   console.log({ _id });
+router.get("/:animalId/donation", async (req, res) => {
+  const { animalId } = req.params;
+  const { _id } = req.user;
+  console.log({ _id });
 
-//   await creatureService.addVotesToCreature(creatureId, _id);
+  await animalService.addDonationToAnimal(animalId, _id);
 
-//   res.redirect(`/posts/${creatureId}/details`);
-// });
+  res.redirect(`/posts/${animalId}/details`);
+});
 
 module.exports = router;
