@@ -24,7 +24,7 @@ const animalSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  needs: {
+  location: {
     type: String,
     required: true,
   },

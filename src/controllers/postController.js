@@ -91,7 +91,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/search", async (req, res) => {
-  console.log("here");
   const { search, name, location, needs } = req.query;
 
   let animals = await animalService.getAll().lean();
