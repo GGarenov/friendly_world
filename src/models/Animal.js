@@ -4,16 +4,20 @@ const animalSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
+    minLength: 2,
   },
 
   years: {
-    type: String,
+    type: Number,
     required: true,
+    minLength: 1,
+    maxLength: 100,
   },
 
   kind: {
     type: String,
     required: true,
+    minLength: 3,
   },
   imageUrl: {
     type: String,
@@ -23,14 +27,20 @@ const animalSchema = new mongoose.Schema({
   needs: {
     type: String,
     required: true,
+    minLength: 3,
+    maxLength: 20,
   },
-  needs: {
+  location: {
     type: String,
     required: true,
+    minLength: 5,
+    maxLength: 15,
   },
   description: {
     type: String,
     required: true,
+    minLength: 5,
+    maxLength: 50,
   },
   donations: [
     {
