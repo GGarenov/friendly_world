@@ -6,8 +6,9 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
+    minLength: 10,
   },
-  password: { type: String, required: true },
+  password: { type: String, required: true, minLength: 4 },
 });
 
 userSchema.virtual("repeatPassword").set(function (value) {
